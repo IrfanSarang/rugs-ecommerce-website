@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 90px 0 60px;
+
+  background: linear-gradient(90deg, #7a1e1e 0%, #e03737 50%, #7a1e1e 100%);
+}
+
+/* Header left and right box */
+.header-box-left {
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.header-box-right {
+  height: 75%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Logo and heading */
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 115%;
+  width: auto;
+}
+
+.heading {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.heading h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: "Noto Nastaliq Urdu";
+}
+
+/* Account and cart icons */
+.account-icon,
+.cart-icon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.account-icon button,
+.cart-icon button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.account-icon img,
+.cart-icon img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+/* Hover effect */
+.account-icon button:hover,
+.cart-icon button:hover {
+  transform: scale(1.1);
+}

@@ -1,0 +1,46 @@
+nav {
+  height: 35px;
+  width: 100%;
+}
+
+nav ul {
+  background-color: #f6f1eb;
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  padding: 0 130px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li a {
+  position: relative;
+  align-self: center;
+  text-decoration: none;
+  color: #810b0b;
+  font-weight: 500;
+  font-family: Scheherazade;
+  font-size: 1.1rem;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #e03737;
+  transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
