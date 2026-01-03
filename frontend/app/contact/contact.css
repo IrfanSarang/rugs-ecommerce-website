@@ -1,0 +1,107 @@
+.contact-section {
+  padding: 40px 20px;
+  background: #f6f6f6;
+}
+
+.contact-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h2 {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* FORM */
+.contact-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 12px 0 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 110px;
+  resize: none;
+}
+
+.contact-form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #c4161c;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #a01216;
+}
+
+/* INFO */
+.info-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.info-item span {
+  font-size: 1.3rem;
+}
+
+/* HOURS */
+.hours {
+  display: grid;
+  gap: 12px;
+}
+
+.hours strong {
+  font-size: 0.95rem;
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  display: grid;
+  gap: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .row {
+    grid-template-columns: 1fr;
+  }
+}
