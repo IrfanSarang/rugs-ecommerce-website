@@ -1,0 +1,128 @@
+.blog-heading h1 {
+  font-size: 2.3rem;
+  color: #7a1e1e;
+  text-align: center;
+  padding: 15px 10px;
+}
+
+.blog-search {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-search input {
+  width: 65%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.blog-search button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #7a1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.blog-search button:hover {
+  background-color: #5c1616;
+}
+
+/* Blog Content Section */
+.blog-content {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  background-color: #fafafa;
+}
+
+/* Blog Card */
+.blog-article {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Blog Image */
+.blog-article img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-article:hover img {
+  transform: scale(1.05);
+}
+
+/* Blog Content Wrapper */
+.blog-article .content {
+  padding: 20px;
+}
+
+/* Blog Title */
+.blog-article h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  padding: 5px 10px;
+}
+
+/* Blog Description */
+.blog-article p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+
+  padding: 5px 10px;
+}
+
+/* Read More Link */
+.blog-article a {
+  margin-top: auto;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #8b5e3c; /* premium rug-like brown */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-article a:hover {
+  color: #5c3b26;
+  text-decoration: underline;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 480px) {
+  .blog-content {
+    padding: 30px 15px;
+  }
+
+  .blog-article img {
+    height: 200px;
+  }
+
+  .blog-article h2 {
+    font-size: 1.25rem;
+  }
+}
