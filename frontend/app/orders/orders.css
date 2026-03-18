@@ -1,0 +1,229 @@
+.user-orders-main {
+    min-height: 80vh;
+    background: var(--persian-cream);
+    padding: 140px 20px 80px;
+}
+
+.orders-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.orders-header-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.orders-header-section .subtitle {
+    font-family: 'Inter', sans-serif;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.orders-loading, .orders-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.order-card {
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--border-subtle);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: var(--transition-smooth);
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(139, 0, 0, 0.05);
+}
+
+.order-card-header {
+    padding: 25px 30px;
+    background: rgba(139, 0, 0, 0.02);
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--persian-red);
+}
+
+.order-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.status-badge {
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge.pending { background: #fff8e1; color: #f57c00; }
+.status-badge.shipped { background: #e3f2fd; color: #1976d2; }
+.status-badge.delivered { background: #e8f5e9; color: #388e3c; }
+.status-badge.cancelled { background: #ffebee; color: #d32f2f; }
+
+.order-card-content {
+    padding: 30px;
+}
+
+.order-items-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-item-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: 600;
+    color: var(--deep-charcoal);
+}
+
+.item-qty {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.item-subtotal {
+    font-weight: 700;
+    color: var(--deep-charcoal);
+}
+.order-delivery-info {
+    padding: 15px 25px;
+    background: rgba(212, 175, 55, 0.03);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.order-delivery-info .info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-delivery-info .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    font-weight: 700;
+}
+
+.order-delivery-info .value {
+    font-size: 0.85rem;
+    color: var(--deep-charcoal);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .order-delivery-info {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.order-card-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.total-label {
+    font-family: 'Inter', sans-serif;
+    color: #888;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.total-value {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: var(--deep-charcoal);
+}
+
+@media (max-width: 768px) {
+    .order-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .status-badge {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .order-card-footer {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    
+    .item-subtotal {
+        font-size: 0.9rem;
+    }
+}

@@ -47,10 +47,10 @@ export default function Carousel({
       ))}
 
       <button className="carousel-btn prev" onClick={prevSlide}>
-        &#10094;
+        &#8249;
       </button>
       <button className="carousel-btn next" onClick={nextSlide}>
-        &#10095;
+        &#8250;
       </button>
 
       <div className="carousel-indicators">

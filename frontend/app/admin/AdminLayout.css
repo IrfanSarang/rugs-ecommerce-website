@@ -1,0 +1,162 @@
+.admin-layout {
+    display: flex;
+    background: var(--persian-cream);
+    min-height: 100vh;
+    color: var(--deep-charcoal);
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: 280px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.admin-header {
+    height: 80px;
+    background: rgba(253, 250, 245, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-mobile-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-box {
+    width: 24px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color: var(--persian-red);
+    display: block;
+}
+
+.hamburger-inner {
+    position: relative;
+    top: 50%;
+    margin-top: -1px;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    position: absolute;
+}
+
+.hamburger-inner::before { top: -8px; }
+.hamburger-inner::after { bottom: -8px; }
+
+.admin-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+
+.search-bar input {
+    background: #fff;
+    border: 1px solid var(--border-subtle);
+    color: var(--deep-charcoal);
+    padding: 12px 25px;
+    border-radius: 50px;
+    width: 350px;
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.search-bar input:focus {
+    border-color: var(--persian-red);
+    box-shadow: 0 5px 15px rgba(139, 0, 0, 0.05);
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-profile span {
+    font-weight: 600;
+    color: var(--persian-red);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--gold-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.75rem;
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+}
+
+.admin-content {
+    padding: 40px;
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .admin-main {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .admin-header {
+        padding: 0 20px;
+    }
+    
+    .admin-content {
+        padding: 20px;
+    }
+}
+
+.admin-loading {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--persian-cream);
+}
+
+.spinner {
+    width: 45px;
+    height: 45px;
+    border: 3px solid rgba(139, 0, 0, 0.1);
+    border-top-color: var(--persian-red);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

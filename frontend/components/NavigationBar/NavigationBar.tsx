@@ -7,6 +7,11 @@ import { usePathname } from "next/navigation";
 
 const NavigationBar: React.FC = () => {
   const pathname = usePathname();
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -18,13 +23,13 @@ const NavigationBar: React.FC = () => {
   ];
 
   return (
-    <nav>
+    <nav className="main-nav-container">
       <ul>
         {navLinks.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className={pathname === link.href ? "active" : ""}
+              className={mounted && pathname === link.href ? "active" : ""}
             >
               {link.name}
             </Link>

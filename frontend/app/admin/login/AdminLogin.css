@@ -1,0 +1,211 @@
+.admin-login-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--persian-cream);
+    position: relative;
+    overflow: hidden;
+    --heritage-brown: #5d2525;
+}
+
+.heritage-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(93, 37, 37, 0.05) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.admin-login-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.login-heritage-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 40px;
+    padding: 70px 50px;
+    text-align: center;
+    box-shadow: var(--premium-shadow);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heritage-logo {
+    margin-bottom: 50px;
+}
+
+.heritage-logo h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, var(--persian-red), var(--heritage-brown));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.heritage-logo span {
+    color: var(--persian-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.admin-login-form .form-group {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+
+.admin-login-form label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.admin-login-form input {
+    background: var(--persian-cream);
+    border: 1px solid var(--border-subtle);
+    padding: 18px 30px;
+    border-radius: 100px;
+    color: var(--deep-charcoal);
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+}
+
+.admin-login-form input:focus {
+    border-color: var(--heritage-brown);
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(93, 37, 37, 0.08);
+}
+
+.admin-login-form input.invalid {
+    border-color: var(--persian-red);
+    background: rgba(139, 0, 0, 0.02);
+}
+
+.live-error {
+    font-size: 0.7rem;
+    color: var(--persian-red);
+    font-weight: 700;
+    margin-top: 4px;
+    margin-left: 20px;
+    height: 14px;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.live-error.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-master {
+    margin-top: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--persian-gold), var(--heritage-brown));
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(93, 37, 37, 0.2);
+    font-size: 0.9rem;
+}
+
+.btn-master:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(93, 37, 37, 0.4);
+}
+
+.btn-master:active {
+    transform: translateY(-1px) scale(1);
+}
+
+.btn-master:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+.admin-error-msg {
+    color: var(--persian-red);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(139, 0, 0, 0.05);
+    border-radius: 15px;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.login-footer {
+    margin-top: 40px;
+}
+
+.back-link {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.back-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--heritage-brown);
+    transition: width 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--heritage-brown);
+}
+
+.back-link:hover::after {
+    width: 100%;
+}
+
+
